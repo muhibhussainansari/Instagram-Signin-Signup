@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="shortcut icon" href="/assets/media/icons8-instagram-48.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <button onclick="logout()">Log Out</button>
+    <button onclick="dlt()">Delete Account</button>
+
+
+    <!-- <script src="app.js"></script> -->
+    <script>
+        var email = localStorage.getItem('Email')
+        document.write(`<h1> Welcome ${email} ! </h1>`)
+
+        function logout() {
+            location.href = './signin.html'
+        }
+
+        function dlt() {
+            localStorage.clear()
+            location.href = './signup.html'
+        }
+    </script>
+</body>
+
+</html>
